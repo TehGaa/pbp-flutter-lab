@@ -114,28 +114,25 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Visibility(
             visible: _counter != 0,
             maintainState: true,
             maintainSize: true,
             maintainAnimation: true,
-            child: Container(
-                margin: const EdgeInsets.only(left: 25),
-                child: FloatingActionButton(
-                  onPressed: _decrementCounter,
-                  tooltip: 'Decrement',
-                  child: const Icon(Icons.remove),
-                )),
+            child: FloatingActionButton(
+              onPressed: _decrementCounter,
+              tooltip: 'Decrement',
+              child: const Icon(Icons.remove),
+            ),
           ),
           Visibility(
-            child: Container(
-                margin: const EdgeInsets.only(left: 255),
-                child: FloatingActionButton(
-                  onPressed: _incrementCounter,
-                  tooltip: 'Increment',
-                  child: const Icon(Icons.add),
-                )),
+            child: FloatingActionButton(
+              onPressed: _incrementCounter,
+              tooltip: 'Increment',
+              child: const Icon(Icons.add),
+            ),
           ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
