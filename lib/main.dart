@@ -124,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.only(left: 25),
                 child: FloatingActionButton(
                   onPressed: _decrementCounter,
+                  tooltip: 'Decrement',
                   child: const Icon(Icons.remove),
                 )),
           ),
@@ -132,6 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.only(left: 255),
                 child: FloatingActionButton(
                   onPressed: _incrementCounter,
+                  tooltip: 'Increment',
                   child: const Icon(Icons.add),
                 )),
           ),
