@@ -6,29 +6,29 @@ Stateless widget merupakan widget yang apabila telah dibuat, state dari widget t
 Stateful widget merupakan widget yang apabila telah dibuat, state dari widget tersebut dapat diubah-ubah. Stateful widget digunakan untuk membuat widget yang membutuhkan dependensi data, seperti CheckBox, RadioButton, dll.
 
 ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
-1. Scaffold
+1. Scaffold <br>
     Fungsi dari Scaffold adalah memberikan wadah dari banyak widget terutama pada halaman utama.
-2. Text
+2. Text <br>
     Fungsi dari Text adalah membuat dan menampilkan objek berupa tulisan
-3. Visibility
+3. Visibility <br>
     Fungsi dari Visibility adalah membuat kontrol visibilitas atas sebuah widget
-4. FloatingActionButton
+4. FloatingActionButton <br>
     Fungsi dari FloatingActionButton adalah membuat dan menampilkan tombol dengan sifat __hover__.
-5. Icon
+5. Icon <br>
     Fungsi dari Icon adalah untuk membuat dan menampilkan icon.
-6. Row
+6. Row <br>
     Fungsi dari Row adalah untuk membuat widget-widget berada pada satu baris yang sama (horizontal)
-7. Column
+7. Column <br>
     Fungsi dari Column adalah untuk membuat widget-widget berada pada satu kolom yang sama (vertikal)
-8. Center
+8. Center <br>
     Fungsi dari Center adalah menyediakan layout dari widget dengan center alignment
-9. AppBar
+9. AppBar <br>
     Fungsi dari AppBar adalah membuat sebuah bar yang dapat diisikan widget-widget lain
-10. TextStyle
+10. TextStyle <br>
     Fungsi dari TextStyle adalah memberikan style bagi suatu Text widget
-11. MyApp
+11. MyApp <br>
     Fungsi dari MyApp adalah membuat dasar dari aplikasi flutter
-12. MyHomePage
+12. MyHomePage <br>
     Fungsi dari MyHomePage adalah membuat tampilan dari aplikasi yang didasari oleh MyApp
 
 ## Apa fungsi dari ```setState()```? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
@@ -45,15 +45,15 @@ const dan final merupakan keyword untuk menyatakan bahwa nilai dari suatu variab
 2. Mengubah tampilan program menjadi seperti berikut.
     Menyunting ```main.dart``` dengan menambahkan widget Row pada atribut floatingActionButton sehingga kita dapat menambahkan lebih dari 1 button. Kemudian, mengubah text default menjadi ganjil/genap beserta warnanya sesuai dengan kondisi variabel _counter.
 3. Mengimplementasikan logika berikut pada program.
-    - Tombol + menambahkan angka sebanyak satu satuan.
+    - Tombol + menambahkan angka sebanyak satu satuan. <br>
         Menambahkan reference method _incrementCounter yang melakukan increment counter pada atribut onPressed FloatingActionButton tambah.
-    - Tombol - mengurangi angka sebanyak satu satuan. Apabila counter bernilai 0, maka tombol - tidak memiliki efek apapun pada counter.
+    - Tombol - mengurangi angka sebanyak satu satuan. Apabila counter bernilai 0, maka tombol - tidak memiliki efek apapun pada counter. <br>
         Menambahkan reference method _decrementCounter yang melakukan decrement counter pada atribut onPressed FloatingActionButton kurang. Pada method tersebut, variabel _counter hanya akan berubah ketika variabel _counter belum sama dengan 0.
-    - Apabila counter bernilai ganjil, maka teks indikator berubah menjadi "GANJIL" dengan warna biru.
+    - Apabila counter bernilai ganjil, maka teks indikator berubah menjadi "GANJIL" dengan warna biru. <br>
         Pada atribut color TextStyle widget dilakukan ternary operator yang mengeluarkan biru ketika variabel _counter bernilai ganjil.
-    - Apabila counter bernilai genap, maka teks indikator berubah menjadi "GENAP" dengan warna merah.
+    - Apabila counter bernilai genap, maka teks indikator berubah menjadi "GENAP" dengan warna merah. <br>
         Pada atribut color TextStyle widget dilakukan ternary operator yang mengeluarkan merah ketika variabel _counter bernilai genap.
-    - Angka 0 dianggap sebagai angka genap.
+    - Angka 0 dianggap sebagai angka genap. <br>
         Hal tersebut termasuk ke dalam kondisi ```_counter % 2 == 0``` yang mana ```true``` ketika genap dan ```false``` ketika ganjil.
 
 ## Getting Started
