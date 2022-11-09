@@ -41,7 +41,7 @@ const dan final merupakan keyword untuk menyatakan bahwa nilai dari suatu variab
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. Membuat sebuah program Flutter baru dengan nama counter_7.
-    Membuat aplikasi flutter yang baru dengan perintah ```flutter create <app_name>```
+    Membuat aplikasi flutter yang baru dengan perintah ```flutter create counter_7```
 2. Mengubah tampilan program menjadi seperti berikut.
     Menyunting ```main.dart``` dengan menambahkan widget Row pada atribut floatingActionButton sehingga kita dapat menambahkan lebih dari 1 button. Kemudian, mengubah text default menjadi ganjil/genap beserta warnanya sesuai dengan kondisi variabel _counter.
 3. Mengimplementasikan logika berikut pada program.
