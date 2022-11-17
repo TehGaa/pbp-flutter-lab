@@ -1,5 +1,6 @@
 # counter_7
 
+## TUGAS 7
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 Stateless widget merupakan widget yang apabila telah dibuat, state dari widget tersebut tidak dapat berubah. Stateless widget digunakan ketika tidak dibutuhkan dependensi data yang berubah-ubah, seperti Text, IconButton, dll.
 
@@ -55,6 +56,84 @@ const dan final merupakan keyword untuk menyatakan bahwa nilai dari suatu variab
         Pada atribut color TextStyle widget dilakukan ternary operator yang mengeluarkan merah ketika variabel _counter bernilai genap.
     - Angka 0 dianggap sebagai angka genap. <br>
         Hal tersebut termasuk ke dalam kondisi ```_counter % 2 == 0``` yang mana ```true``` ketika genap dan ```false``` ketika ganjil.
+
+## TUGAS 8
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+```Navigator.push``` berguna untuk membuat sebuah route baru yang diletakkan di top of stack, sedangkan ```Navigator.pushReplacement``` berguna untuk membuat sebuah route baru yang menggantikan top of stack. Perbedaan jelas dapat terlihat ketika pembuatan route yang menggunakan ```push``` dapat kembali ke halaman sebelumnya menggunakan ```pop```, sedangkan ```pushReplacement``` tidak.
+
+##  Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+1. Scaffold <br>
+    Fungsi dari Scaffold adalah memberikan wadah dari banyak widget terutama pada halaman utama.
+2. Text <br>
+    Fungsi dari Text adalah membuat dan menampilkan objek berupa tulisan
+3. FloatingActionButton <br>
+    Fungsi dari FloatingActionButton adalah membuat dan menampilkan tombol dengan sifat __hover__.
+4. Column <br>
+    Fungsi dari Column adalah untuk membuat widget-widget berada pada satu kolom yang sama (vertikal)
+5. Center <br>
+    Fungsi dari Center adalah menyediakan layout dari widget dengan center alignment
+6. AppBar <br>
+    Fungsi dari AppBar adalah membuat sebuah bar yang dapat diisikan widget-widget lain
+7. TextStyle <br>
+    Fungsi dari TextStyle adalah memberikan style bagi suatu Text widget
+11. MyApp <br>
+    Fungsi dari MyApp adalah membuat dasar dari aplikasi flutter
+12. Padding <br>
+    Fungsi dari Padding adalah untuk membuat aturan padding bagi sebuah widget yaitu child
+13. TextFormField <br>
+    Fungsi dari TextFormField adalah untuk membuat form yang diisikan text
+14. TextButton <br>
+    Fungsi dari TextButton adalah untuk membuat sebuah button yang simpel
+15. Card <br>
+    Fungsi dari Card adalah untuk membentuk objek card
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+1. onPressed <br>
+    Event yang terjadi ketika sebuah button ditekan.
+2. onChanged <br>
+    Event yang terjadi ketika sebuah perubahan dilakukan (misal, pengisian form).
+3. onSaved <br>
+    Event yang terjadi ketika sebuah perubahan disimpan (misal, pengisia form).
+4. onPointerDown <br>
+    Event yang terjadi ketika sebuah button pada pointer (misal, mouse) ditekan.
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator bekerja dalam mengatur route menggunakan stack. Route yang ditampilkan merupakan route yang berada pada top of stack. User dapat menggunakan method push untuk memasukkan route baru ke dalam stack dan pop untuk kembali ke route sebelumnya (route yang berada pada satu level di bawah).
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+### Menambahkan drawer/hamburger menu pada app yang telah dibuat sebeumnya.
+Widget Drawer ditambahkan pada atribut drawer yang ada di widget scaffold. Hal tersebut dilakukan di semua file dart, seperti main.dart, form.dart, dan data.dart agar terdapat route untuk ke masing-masing halaman.
+
+### Menambahkan tiga tombol navigasi pada drawer/hamburger.
+#### Navigasi pertama untuk ke halaman counter.
+Menambahkan sebuah widget ListTile yang ketika ditekan akan menjalankan Navigator.pushReplacement dengan builder pada MaterialPageRoute yaitu MyHomePage.
+
+#### Navigasi kedua untuk ke halaman form.
+Menambahkan sebuah widget ListTile yang ketika ditekan akan menjalankan Navigator.pushReplacement dengan builder pada MaterialPageRoute yaitu MyFormPage.
+
+#### Navigasi ketiga untuk ke halaman yang menampilkan data budget yang telah di-input melalui form.
+Menambahkan sebuah widget ListTile yang ketika ditekan akan menjalankan Navigator.pushReplacement dengan builder pada MaterialPageRoute yaitu MyDataPage.
+
+### Menambahkan halaman form
+Menambahkan StateFul widget dengan state yang mengembalikan widget Scaffold. Isi dari halaman form akan dimasukkan TextFormField, Drawer, DropdownButton, dan TextButton.
+
+#### Menambahkan elemen input dengan tipe data String berupa judul budget.
+Memasukkan widget TextFormField agar dapat menampilkan field form untuk diisi pengguna. Title dari form dibuat menjadi ```judul```.
+
+#### Menambahkan elemen input dengan tipe data String berupa nominal budget.
+Memasukkan widget TextFormField agar dapat menampilkan field form untuk diisi pengguna. Title dari form dibuat menjadi ```nominal```. Keyboard type dari form ini dibuat menjadi number.
+
+#### Menambahkan elemen dropdown yang berisi tipe budget dengan pilihan pemasukan dan pengeluaran.
+Memasukkan widget ListTile dengan trailing widget DropdownButton yang memiliki list items berupa ```['Pemasukan', 'Pengeluaran']```.
+
+#### Menambahkan button untuk menyimpan budget.
+Memasukkan widget TextButton yang memiliki event listener ```onPressed``` pada floatingActionButton. Event listener tersebut dimasukkan fungsi yang dapat menyimpan semua input user ke dalam sebuah static list bernama data.
+
+### Menambahkan halaman data budget
+Menambahkan StateFul widget dengan state yang mengembalikan widget Scaffold. Isi dari halaman data akan dimasukkan Card, Drawer, dan Text widget.
+
+#### Menampilkan semua judul, nominal, dan tipe budget yang telah ditambahkan pada form.
+Menambahkan widget Card sebanyak panjang list data. Card yang ditambahkan memiliki child berupa Column. Kemudian, menambahkan Text widget pada children yang ada di Column widget dengan judul yang telah dimasukkan user. Terakhir, menambahkan Row widget dengan isi berupa Text widget nominal dan tipe budget ke children dari Column.
 
 ## Getting Started
 
